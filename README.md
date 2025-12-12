@@ -10,3 +10,6 @@ Tracking the positive predictive value of the COVID-19 antibody tests:
 Feelings of safety tracked over time:
 ![Safety in India and Thailand decreasing](/FeelingSafeIndiaThailand.png)
 
+UK food systems descriptive statistics:
+![Imports and production in 2023](/UK_food_importprod_2023.png)
+
