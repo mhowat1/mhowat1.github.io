@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meghan Lee Howat | MPA Student - Data Science for Public Policy</title>
-        <sub>London School of Economics </sub>
-
     <style>
         * {
             margin: 0;
@@ -14,7 +12,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Garamond', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: Garamond, 'Times New Roman', serif;
             line-height: 1.6;
             color: #333;
         }
@@ -27,7 +25,9 @@
         
         /* Header */
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.6) 0%, rgba(52, 152, 219, 0.6) 100%),
+                        url('food.jpg') center/cover no-repeat;
+            background-attachment: scroll;
             color: white;
             padding: 80px 0 60px;
             text-align: center;
@@ -45,10 +45,13 @@
         }
         
         /* Navigation */
-        
         nav {
-           background: linear-gradient(135deg, rgba(44, 62, 80, 0.3) 0%, rgba(52, 152, 219, 0.3) 100%),
-            url('food.jpg') center/cover;
+            background: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         nav ul {
@@ -89,65 +92,68 @@
             margin-bottom: 15px;
         }
         
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+        /* Projects Section */
+        #projects {
+            background: #f8f9fa;
         }
         
-        .project-card {
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s ease;
+        .intro {
             background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
         }
         
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-color: #3498db;
-        }
-        
-        .project-card h3 {
+        .intro h3 {
             color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-size: 1.8em;
         }
         
-        .project-card p {
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .project-card .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-        
-        .tag {
-            background: #ecf0f1;
-            color: #2c3e50;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        
-        .project-link {
+        .course-tag {
             display: inline-block;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin-bottom: 30px;
         }
         
-        .project-link:hover {
+        .visualization {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .visualization h3 {
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        .visualization img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        .visualization img:hover {
+            transform: scale(1.02);
+        }
+        
+        .visualization p {
+            margin-top: 15px;
+            color: #666;
+            font-style: italic;
         }
         
         /* Skills Section */
@@ -273,154 +279,40 @@
                 I am most interested in agrifood systems transformations to support planetary health, and how data and machine learning 
                 can play a pivotal role in influencing governments and individuals to pursue net-zero policies.
                 My work combines data visualization, econometric analysis, and machine learning techniques to address these 
-                complicated task of systems transformation.
+                complicated tasks of systems transformation.
+            </p>
         </div>
     </section>
     
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizations | Meghan Howat</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .back-link {
-            display: inline-block;
-            color: #3498db;
-            text-decoration: none;
-            margin-bottom: 30px;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-        
-        .back-link:hover {
-            color: #2c3e50;
-        }
-        
-        .intro {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        
-        .intro h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-        
-        .intro p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        
-        .visualization {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        
-        .visualization h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.6em;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
-        }
-        
-        .visualization img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
-        
-        .visualization img:hover {
-            transform: scale(1.02);
-        }
-        
-        .course-tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 500;
-            margin-bottom: 30px;
-        }
-        
-        @media (max-width: 768px) {
-            .intro h1 {
-                font-size: 1.6em;
-            }
-            
-            .visualization h2 {
-                font-size: 1.3em;
-            }
-        }
-    </style>
-</head>
-<body>
     <section id="projects">
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
-        
-        <div class="intro">
-            <h1>Welcome to my Github page for visualizations and data analysis</h1>
+        <div class="container">
+            <h2>Visualizations and Data Analysis</h2>
+            
+            <div class="intro">
+                <h3>Welcome to my portfolio of data visualizations</h3>
+            </div>
+            
+            <span class="course-tag">Selected Visualizations</span>
+            
+            <div class="visualization">
+                <h3>Feelings of safety tracked over time</h3>
+                <img src="FeelingSafeIndiaThailand.png" alt="Safety in India and Thailand decreasing">
+                <p>Figure: Safety perceptions in India and Thailand showing declining trends over time</p>
+            </div>
+            
+            <div class="visualization">
+                <h3>UK food systems descriptive statistics</h3>
+                <img src="UK_food_importprod_2023.png" alt="Imports and production in 2023">
+                <p>Figure: UK food imports and production levels in 2023</p>
+            </div>
+            
+            <div class="visualization">
+                <h3>Tracking the positive predictive value of the COVID-19 antibody tests</h3>
+                <img src="COVIDantibodytest.png" alt="Antibody test PPV">
+                <p>Figure: Positive predictive value analysis of COVID-19 antibody testing</p>
+            </div>
         </div>
-        
-        <span class="course-tag">PP422</span>
-        
-        <div class="visualization">
-            <h2>Feelings of safety tracked over time</h2>
-            <img src="FeelingSafeIndiaThailand.png" alt="Safety in India and Thailand decreasing">
-            <p style="margin-top: 15px; color: #666; font-style: italic;">
-                Figure: Safety perceptions in India and Thailand showing declining trends over time
-            </p>
-        </div>
-        
-        <div class="visualization">
-            <h2>UK food systems descriptive statistics</h2>
-            <img src="UK_food_importprod_2023.png" alt="Imports and production in 2023">
-            <p style="margin-top: 15px; color: #666; font-style: italic;">
-                Figure: UK food imports and production levels in 2023
-            </p>
-        </div>
-        
-        <div class="visualization">
-            <h2>Tracking the positive predictive value of the COVID-19 antibody tests</h2>
-            <img src="COVIDantibodytest.png" alt="Antibody test PPV">
-            <p style="margin-top: 15px; color: #666; font-style: italic;">
-                Figure: Positive predictive value analysis of COVID-19 antibody testing
-            </p>
-        </div>
-    </div>
-</section>
+    </section>
     
     <section id="skills">
         <div class="container">
@@ -473,7 +365,7 @@
             <h2>Contact</h2>
             <div class="contact-info">
                 <p><strong>Email:</strong> <a href="mailto:m.l.howat@lse.ac.uk">m.l.howat@lse.ac.uk</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank">https://www.linkedin.com/in/meghan-howat-462604154/</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank">linkedin.com/in/meghan-howat</a></p>
                 <p><strong>GitHub:</strong> <a href="https://github.com/mhowat1" target="_blank">github.com/mhowat1</a></p>
             </div>
         </div>
