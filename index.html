@@ -105,15 +105,10 @@
             opacity: 1;
         }
 
-        .profile-links a:focus {
-            outline: none;
-        }
-
         .profile-links img {
             width: 26px;
             height: 26px;
-            border: none !important;
-            outline: none !important;
+            border: none;
             background: transparent;
         }
 
@@ -172,13 +167,40 @@
             color: #555;
         }
 
-        /* ---------- Projects ---------- */
+        /* ---------- Current Projects ---------- */
         #projects {
             background: #fafafa;
             border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 10px;
+        }
+
+        .project-card img {
+            display: block;
+            height: 70px;
+            width: auto;
+            max-width: 100%;
+            margin: 0 auto 12px auto;
+            object-fit: contain;
+        }
+
+        .project-card h3 {
+            font-size: 1.1em;
+            margin-bottom: 6px;
+        }
+
+        .project-card p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* ---------- Visualizations ---------- */
         .visualization {
             margin-bottom: 35px;
         }
@@ -197,27 +219,6 @@
             font-size: 0.95em;
             margin-top: 8px;
             color: #555;
-        }
-
-        /* ---------- Skills ---------- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 24px;
-        }
-
-        .skill-category h3 {
-            font-size: 1.05em;
-            margin-bottom: 6px;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            font-size: 0.95em;
-            padding: 3px 0;
         }
 
         /* ---------- Contact ---------- */
@@ -240,6 +241,16 @@
         }
 
         /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card img {
+                height: 60px;
+            }
+        }
+
         @media (max-width: 700px) {
             .intro-grid {
                 grid-template-columns: 1fr;
@@ -267,8 +278,8 @@
                 <img src="finalheadshot.png" alt="Headshot of Meghan Howat">
 
                 <div class="profile-links">
-                    <a href="https://github.com/mhowat1" target="_blank" aria-label="GitHub" >
-                        <img src="icons/github.svg" alt="Github icon">
+                    <a href="https://github.com/mhowat1" target="_blank" aria-label="GitHub">
+                        <img src="icons/github.svg" alt="GitHub icon">
                     </a>
                     <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank" aria-label="LinkedIn">
                         <img src="icons/linkedin2.svg" alt="LinkedIn icon">
@@ -298,7 +309,7 @@
                 </p>
 
                 <a class="cv-link" href="MH_CV2026.pdf" target="_blank">
-                    Download CV (pdf)
+                    Download CV (PDF)
                 </a>
             </div>
 
@@ -361,31 +372,29 @@
         <div class="projects-grid">
 
             <div class="project-card">
-                <img src="projects/grantham.jpeg" alt="Project 1 image">
-                <h3>Deliberating Food Choice project</h3>
+                <img src="projects/grantham.jpeg" alt="Grantham Research Institute logo">
+                <h3>Deliberating Food Choice Project</h3>
                 <p>
-                    Creating briefing materials on the environmental impact of the food system in the UK for a policy experiment
-                    with the Grantham Research Institute on Climate Change and the Environment. The project aims to explore how information 
-                    about food choices influences public action towards sustainable diets.
+                    Creating briefing materials on the environmental impact of the food system in the UK
+                    for a policy experiment with the Grantham Research Institute on Climate Change and the Environment.
                 </p>
             </div>
 
             <div class="project-card">
-                <img src="projects/lse.png" alt="Project 2 image">
+                <img src="projects/lse.png" alt="London School of Economics logo">
                 <h3>Environmental Reading Group</h3>
                 <p>
-                    I am running an Environmental Reading Group among MPA students at LSE, focusing on key texts in environmental economics
-                    and policy. The group aims to foster discussion and deepen understanding of environmental challenges and solutions.
-                    Our first books are Regenesis by George Monbiot and More and More and More: An All-Consuming History of Energy by Jean-Baptiste Fressoz.
+                    Running an Environmental Reading Group among MPA students at LSE, focused on key texts
+                    in environmental economics and policy.
                 </p>
             </div>
 
             <div class="project-card">
-                <img src="projects/grantham.jpeg" alt="Project 3 image">
+                <img src="projects/grantham.jpeg" alt="Grantham Research Institute logo">
                 <h3>Ongoing Policy Papers</h3>
                 <p>
-                    I am exploring a number of projects with collaborators at Grantham, the UK CCC, and Oxford on topics including data gaps in food systems accounting, 
-                    economic feasibility of diet transitions in the UK, and the differential impacts of diet changes across countries of the UK.
+                    Collaborative policy research with Grantham, the UK Climate Change Committee, and Oxford
+                    on food systems accounting and diet transition feasibility.
                 </p>
             </div>
 
@@ -422,7 +431,6 @@
 <section id="contact">
     <div class="container">
         <h2>Contact</h2>
-
         <div class="contact-info">
             <p>Email: <a href="mailto:m.l.howat@lse.ac.uk">m.l.howat@lse.ac.uk</a></p>
         </div>
@@ -437,3 +445,4 @@
 
 </body>
 </html>
+
