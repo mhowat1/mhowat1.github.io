@@ -16,7 +16,7 @@
         /* ---------- Typography ---------- */
         body {
             font-family: "Times New Roman", Georgia, serif;
-            line-height: 1.65;
+            line-height: 1.6;
             color: #111;
             background: #fff;
         }
@@ -39,29 +39,29 @@
 
         /* ---------- Layout ---------- */
         .container {
-            max-width: 900px;
+            max-width: 880px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         section {
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         section h2 {
-            font-size: 1.6em;
-            margin-bottom: 25px;
+            font-size: 1.5em;
+            margin-bottom: 18px;
         }
 
-        /* ---------- Intro / Header ---------- */
+        /* ---------- Intro ---------- */
         .intro {
-            padding: 60px 0 40px;
+            padding: 40px 0 25px;
         }
 
         .intro-grid {
             display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 40px;
+            grid-template-columns: 150px 1fr;
+            gap: 32px;
             align-items: center;
         }
 
@@ -71,17 +71,39 @@
         }
 
         .intro h1 {
-            font-size: 2.4em;
-            margin-bottom: 10px;
+            font-size: 2.2em;
+            margin-bottom: 8px;
         }
 
         .intro p {
-            font-size: 1.05em;
-            margin-bottom: 15px;
+            font-size: 1.02em;
+            margin-bottom: 12px;
+        }
+
+        /* ---------- Profile Links ---------- */
+        .profile-links {
+            display: flex;
+            gap: 0.7rem;
+            margin-top: 8px;
+        }
+
+        .profile-links a {
+            display: inline-flex;
+            opacity: 0.75;
+            transition: opacity 0.2s ease;
+        }
+
+        .profile-links a:hover {
+            opacity: 1;
+        }
+
+        .profile-links img {
+            width: 20px;
+            height: 20px;
         }
 
         .cv-link {
-            font-size: 0.95em;
+            font-size: 0.92em;
         }
 
         /* ---------- Navigation ---------- */
@@ -95,8 +117,8 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 14px 0;
+            gap: 26px;
+            padding: 10px 0;
             flex-wrap: wrap;
         }
 
@@ -110,12 +132,20 @@
         }
 
         /* ---------- Publications ---------- */
+        .pub-subheading {
+            font-size: 1.05em;
+            font-weight: 600;
+            margin: 18px 0 6px;
+            color: #444;
+        }
+
         .pub-list {
             list-style: none;
+            margin-bottom: 10px;
         }
 
         .pub-list li {
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .pub-title {
@@ -135,12 +165,12 @@
         }
 
         .visualization {
-            margin-bottom: 50px;
+            margin-bottom: 35px;
         }
 
         .visualization h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            font-size: 1.15em;
+            margin-bottom: 8px;
         }
 
         .visualization img {
@@ -150,20 +180,20 @@
 
         .visualization p {
             font-size: 0.95em;
-            margin-top: 10px;
+            margin-top: 8px;
             color: #555;
         }
 
         /* ---------- Skills ---------- */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
         }
 
         .skill-category h3 {
-            font-size: 1.1em;
-            margin-bottom: 10px;
+            font-size: 1.05em;
+            margin-bottom: 6px;
         }
 
         .skill-category ul {
@@ -172,7 +202,7 @@
 
         .skill-category li {
             font-size: 0.95em;
-            padding: 4px 0;
+            padding: 3px 0;
         }
 
         /* ---------- Contact ---------- */
@@ -181,16 +211,16 @@
         }
 
         .contact-info p {
-            margin-bottom: 10px;
-            font-size: 1.05em;
+            margin-bottom: 8px;
+            font-size: 1em;
         }
 
         /* ---------- Footer ---------- */
         footer {
-            padding: 30px 0;
+            padding: 22px 0;
             text-align: center;
             border-top: 1px solid #e0e0e0;
-            font-size: 0.9em;
+            font-size: 0.88em;
             color: #555;
         }
 
@@ -198,6 +228,10 @@
         @media (max-width: 700px) {
             .intro-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .profile-links {
+                justify-content: center;
             }
 
             .intro h1 {
@@ -209,7 +243,7 @@
 
 <body>
 
-<!-- Intro / Header -->
+<!-- Intro -->
 <section class="intro">
     <div class="container">
         <div class="intro-grid">
@@ -229,6 +263,21 @@
                     the use of data, econometrics, and machine learning to support evidence-based
                     net-zero policy design.
                 </p>
+
+                <div class="profile-links">
+                    <a href="mailto:m.l.howat@lse.ac.uk" aria-label="Email">
+                        <img src="icons/email.svg" alt="Email icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank" aria-label="LinkedIn">
+                        <img src="icons/linkedin2.svg" alt="LinkedIn icon">
+                    </a>
+                    <a href="https://x.com/meghan_howat" target="_blank" aria-label="X">
+                        <img src="icons/x.svg" alt="X icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=8VA1JpEAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+                        <img src="icons/gs.svg" alt="Google Scholar icon">
+                    </a>
+                </div>
 
                 <a class="cv-link" href="MH_CV2026.pdf" target="_blank">
                     Download CV (PDF)
@@ -253,17 +302,16 @@
     <div class="container">
         <h2>Publications & Working Papers</h2>
 
-        <!-- Peer-reviewed / Academic -->
-        <h3 class="pub-subheading">Peer-Reviewed</h3>
+        <h3 class="pub-subheading">Peer-Reviewed & Academic Writing</h3>
         <ul class="pub-list">
             <li>
-                <span class="pub-title">Working paper title (forthcoming)</span><br>
-                <span class="pub-meta">Working paper, 2026.</span>
+                <span class="pub-meta">
+                    Working papers in progress on environmental policy and food systems.
+                </span>
             </li>
         </ul>
 
-        <!-- Policy writing -->
-        <h3 class="pub-subheading">Policy Writing</h3>
+        <h3 class="pub-subheading">Policy Writing & Commentary</h3>
         <ul class="pub-list">
             <li>
                 <span class="pub-title">
@@ -271,7 +319,7 @@
                         Stolen Season or a Glimpse of a Cleaner Future?
                     </a>
                 </span><br>
-                <span class="pub-meta">Wilson Center Latin American Program blog post, 2020.</span>
+                <span class="pub-meta">Wilson Center blog post.</span>
             </li>
 
             <li>
@@ -280,7 +328,7 @@
                         Chile’s Blind Spot
                     </a>
                 </span><br>
-                <span class="pub-meta">Wilson Center Latin American Program blog post, 2020.</span>
+                <span class="pub-meta">Wilson Center blog post.</span>
             </li>
         </ul>
     </div>
@@ -354,19 +402,6 @@
                     <li>Machine Learning</li>
                 </ul>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-
-        <div class="contact-info">
-            <p>Email: <a href="mailto:m.l.howat@lse.ac.uk">m.l.howat@lse.ac.uk</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank">linkedin.com/in/meghan-howat</a></p>
-            <p>GitHub: <a href="https://github.com/mhowat1" target="_blank">github.com/mhowat1</a></p>
         </div>
     </div>
 </section>
