@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghan Howat | Data Science for Public Policy student</title>
+    <title>Meghan Howat | Data Science for Public Policy</title>
 
     <style>
-        /* ---------------- Base Reset ---------------- */
+        /* ---------- Reset ---------- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* ---------------- Typography ---------------- */
+        /* ---------- Typography ---------- */
         body {
-            font-family: "Latin Modern Roman", "Computer Modern",
-                         "Times New Roman", Georgia, serif;
+            font-family: "Times New Roman", Georgia, serif;
             line-height: 1.65;
             color: #111;
             background: #fff;
         }
 
         h1, h2, h3 {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             font-weight: 600;
-            letter-spacing: 0.2px;
         }
 
         a {
@@ -36,10 +34,10 @@
         }
 
         a:hover {
-            opacity: 0.65;
+            opacity: 0.7;
         }
 
-        /* ---------------- Layout ---------------- */
+        /* ---------- Layout ---------- */
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -51,48 +49,55 @@
         }
 
         section h2 {
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-size: 1.6em;
+            margin-bottom: 25px;
         }
 
-        /* ---------------- Header ---------------- */
-        header {
-            padding: 90px 0 50px;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
+        /* ---------- Intro / Header ---------- */
+        .intro {
+            padding: 60px 0 40px;
         }
 
-        header h1 {
-            font-size: 2.7em;
-            margin-bottom: 12px;
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 40px;
+            align-items: center;
         }
 
-        header p {
-            font-size: 1.1em;
-            color: #444;
+        .intro img {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        .intro h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
         }
 
         .cv-link {
-            margin-top: 20px;
-            display: inline-block;
             font-size: 0.95em;
         }
 
-        /* ---------------- Navigation ---------------- */
+        /* ---------- Navigation ---------- */
         nav {
-            position: sticky;
-            top: 0;
-            background: #fff;
+            border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
-            z-index: 100;
+            background: #fff;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 32px;
+            gap: 30px;
             padding: 14px 0;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -104,70 +109,13 @@
             text-decoration: underline;
         }
 
-        /* ---------------- About ---------------- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .headshot {
-            width: 100%;
-            border: 1px solid #ccc;
-            transition: opacity 0.3s ease;
-        }
-
-        .headshot:hover {
-            opacity: 0.9;
-        }
-
-        #about p {
-            margin-bottom: 16px;
-            font-size: 1.05em;
-        }
-
-        /* ---------------- Projects ---------------- */
-        #projects {
-            background: #fafafa;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .visualization {
-            margin-bottom: 55px;
-        }
-
-        .visualization h3 {
-            font-size: 1.25em;
-            margin-bottom: 10px;
-        }
-
-        .visualization img {
-            width: 100%;
-            border: 1px solid #ccc;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .visualization img:hover {
-            transform: scale(1.01);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-        }
-
-        .visualization p {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #555;
-        }
-
-        /* ---------------- Publications ---------------- */
+        /* ---------- Publications ---------- */
         .pub-list {
             list-style: none;
         }
 
         .pub-list li {
             margin-bottom: 18px;
-            font-size: 1.05em;
         }
 
         .pub-title {
@@ -175,11 +123,38 @@
         }
 
         .pub-meta {
-            color: #555;
             font-size: 0.95em;
+            color: #555;
         }
 
-        /* ---------------- Skills ---------------- */
+        /* ---------- Projects ---------- */
+        #projects {
+            background: #fafafa;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .visualization {
+            margin-bottom: 50px;
+        }
+
+        .visualization h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .visualization img {
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+
+        .visualization p {
+            font-size: 0.95em;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* ---------- Skills ---------- */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,7 +162,7 @@
         }
 
         .skill-category h3 {
-            font-size: 1.15em;
+            font-size: 1.1em;
             margin-bottom: 10px;
         }
 
@@ -196,42 +171,37 @@
         }
 
         .skill-category li {
-            padding: 4px 0;
             font-size: 0.95em;
+            padding: 4px 0;
         }
 
-        /* ---------------- Contact ---------------- */
+        /* ---------- Contact ---------- */
         #contact {
             background: #fafafa;
         }
 
         .contact-info p {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-size: 1.05em;
         }
 
-        /* ---------------- Footer ---------------- */
+        /* ---------- Footer ---------- */
         footer {
-            padding: 35px 0;
+            padding: 30px 0;
             text-align: center;
             border-top: 1px solid #e0e0e0;
             font-size: 0.9em;
             color: #555;
         }
 
-        /* ---------------- Responsive ---------------- */
-        @media (max-width: 720px) {
-            .about-grid {
+        /* ---------- Responsive ---------- */
+        @media (max-width: 700px) {
+            .intro-grid {
                 grid-template-columns: 1fr;
             }
 
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            nav ul {
-                gap: 16px;
-                flex-wrap: wrap;
+            .intro h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -239,34 +209,15 @@
 
 <body>
 
-<header>
+<!-- Intro / Header -->
+<section class="intro">
     <div class="container">
-        <h1>Meghan Howat</h1>
-        <p>Data Science for Public Policy · London School of Economics</p>
-        <a class="cv-link" href="MH_CVAuthumn2025.pdf" target="_blank">
-            Download CV (PDF)
-        </a>
-    </div>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section id="about">
-    <div class="container">
-        <h2>About</h2>
-
-        <div class="about-grid">
-            <img src="finalheadshot.png" alt="Headshot of Meghan Howat" class="headshot">
+        <div class="intro-grid">
+            <img src="finalheadshot.png" alt="Headshot of Meghan Howat">
 
             <div>
+                <h1>Meghan Howat</h1>
+
                 <p>
                     I am a Master of Public Administration student at the London School of Economics,
                     specialising in Data Science for Public Policy with a focus on environmental
@@ -274,20 +225,68 @@
                 </p>
 
                 <p>
-                    My research interests centre on agrifood systems transformation for planetary
-                    health, and on how data, econometrics, and machine learning can support evidence-
-                    based net-zero policy design.
+                    My interests centre on agrifood systems transformation for planetary health and
+                    the use of data, econometrics, and machine learning to support evidence-based
+                    net-zero policy design.
                 </p>
 
-                <p>
-                    My work combines data visualisation, causal inference, and applied machine learning
-                    to address complex policy and systems-level challenges.
-                </p>
+                <a class="cv-link" href="MH_CV2026.pdf" target="_blank">
+                    Download CV (PDF)
+                </a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Publications -->
+<section id="publications">
+    <div class="container">
+        <h2>Publications & Working Papers</h2>
+
+        <!-- Peer-reviewed / Academic -->
+        <h3 class="pub-subheading">Peer-Reviewed</h3>
+        <ul class="pub-list">
+            <li>
+                <span class="pub-title">Working paper title (forthcoming)</span><br>
+                <span class="pub-meta">Working paper, 2026.</span>
+            </li>
+        </ul>
+
+        <!-- Policy writing -->
+        <h3 class="pub-subheading">Policy Writing</h3>
+        <ul class="pub-list">
+            <li>
+                <span class="pub-title">
+                    <a href="https://www.wilsoncenter.org/blog-post/stolen-season-or-glimpse-cleaner-future" target="_blank">
+                        Stolen Season or a Glimpse of a Cleaner Future?
+                    </a>
+                </span><br>
+                <span class="pub-meta">Wilson Center Latin American Program blog post, 2020.</span>
+            </li>
+
+            <li>
+                <span class="pub-title">
+                    <a href="https://www.wilsoncenter.org/blog-post/chiles-blind-spot" target="_blank">
+                        Chile’s Blind Spot
+                    </a>
+                </span><br>
+                <span class="pub-meta">Wilson Center Latin American Program blog post, 2020.</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Projects -->
 <section id="projects">
     <div class="container">
         <h2>Selected Projects & Visualisations</h2>
@@ -312,27 +311,7 @@
     </div>
 </section>
 
-<section id="publications">
-    <div class="container">
-        <h2>Publications & Working Papers</h2>
-
-        <ul class="pub-list">
-            <li>
-                <span class="pub-title">Title of Working Paper</span><br>
-                <span class="pub-meta">Working paper, 2025.</span>
-            </li>
-            <li>
-                <span class="pub-title">Title of Policy Brief or Report</span><br>
-                <span class="pub-meta">Institution or course context, year.</span>
-            </li>
-        </ul>
-
-        <p style="margin-top: 20px; font-size: 0.95em; color: #555;">
-            (Full list available upon request.)
-        </p>
-    </div>
-</section>
-
+<!-- Skills -->
 <section id="skills">
     <div class="container">
         <h2>Skills & Knowledge</h2>
@@ -351,9 +330,9 @@
             <div class="skill-category">
                 <h3>Data Analysis</h3>
                 <ul>
-                    <li>pandas & NumPy</li>
                     <li>Econometrics</li>
                     <li>Causal Inference</li>
+                    <li>Statistical Modelling</li>
                 </ul>
             </div>
 
@@ -369,9 +348,9 @@
             <div class="skill-category">
                 <h3>Domain Knowledge</h3>
                 <ul>
-                    <li>Policy Analysis</li>
                     <li>Environmental Economics</li>
                     <li>Agrifood Systems</li>
+                    <li>Policy Analysis</li>
                     <li>Machine Learning</li>
                 </ul>
             </div>
@@ -379,6 +358,7 @@
     </div>
 </section>
 
+<!-- Contact -->
 <section id="contact">
     <div class="container">
         <h2>Contact</h2>
