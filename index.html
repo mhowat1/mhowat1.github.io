@@ -3,373 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghan Lee Howat | MPA Student - Data Science for Public Policy</title>
+    <title>Meghan Howat | Data Science for Public Policy student</title>
+
     <style>
+        /* ---------------- Base Reset ---------------- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        /* ---------------- Typography ---------------- */
         body {
-            font-family: Garamond, 'Times New Roman', serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: "Latin Modern Roman", "Computer Modern",
+                         "Times New Roman", Georgia, serif;
+            line-height: 1.65;
+            color: #111;
+            background: #fff;
         }
-        
+
+        h1, h2, h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        a {
+            color: #111;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            opacity: 0.65;
+        }
+
+        /* ---------------- Layout ---------------- */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Header */
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        /* ---------------- Header ---------------- */
         header {
-            background: linear-gradient(135deg, rgba(44, 62, 80, 0.6) 0%, rgba(52, 152, 219, 0.6) 100%),
-                        url('food.jpg') center/cover no-repeat;
-            background-attachment: scroll;
-            color: white;
-            padding: 80px 0 60px;
+            padding: 90px 0 50px;
             text-align: center;
+            border-bottom: 1px solid #e0e0e0;
         }
-        
+
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 2.7em;
+            margin-bottom: 12px;
         }
-        
+
         header p {
-            font-size: 1.2em;
-            opacity: 0.95;
+            font-size: 1.1em;
+            color: #444;
         }
-        
-        /* Navigation */
+
+        .cv-link {
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 0.95em;
+        }
+
+        /* ---------------- Navigation ---------------- */
         nav {
-            background: #2c3e50;
-            padding: 15px 0;
             position: sticky;
             top: 0;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
             z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            gap: 32px;
+            padding: 14px 0;
         }
-        
+
         nav a {
-            color: white;
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
         }
-        
+
         nav a:hover {
-            opacity: 0.7;
+            text-decoration: underline;
         }
-        
-        /* Sections */
-        section {
-            padding: 60px 0;
+
+        /* ---------------- About ---------------- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: start;
         }
-        
-        section h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+
+        .headshot {
+            width: 100%;
+            border: 1px solid #ccc;
+            transition: opacity 0.3s ease;
         }
-        
-        /* About Section */
+
+        .headshot:hover {
+            opacity: 0.9;
+        }
+
         #about p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            font-size: 1.05em;
         }
-        
-        /* Projects Section */
+
+        /* ---------------- Projects ---------------- */
         #projects {
-            background: #f8f9fa;
+            background: #fafafa;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
         }
-        
-        .intro {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        
-        .intro h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .course-tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-            font-weight: 500;
-            margin-bottom: 30px;
-        }
-        
+
         .visualization {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
+            margin-bottom: 55px;
         }
-        
+
         .visualization h3 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-            border-left: 4px solid #3498db;
-            padding-left: 15px;
+            font-size: 1.25em;
+            margin-bottom: 10px;
         }
-        
+
         .visualization img {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
+            border: 1px solid #ccc;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        
+
         .visualization img:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
         }
-        
+
         .visualization p {
-            margin-top: 15px;
-            color: #666;
-            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #555;
         }
-        
-        /* Skills Section */
+
+        /* ---------------- Publications ---------------- */
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-list li {
+            margin-bottom: 18px;
+            font-size: 1.05em;
+        }
+
+        .pub-title {
+            font-weight: 600;
+        }
+
+        .pub-meta {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* ---------------- Skills ---------------- */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            gap: 30px;
         }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-        }
-        
+
         .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            font-size: 1.15em;
+            margin-bottom: 10px;
         }
-        
+
         .skill-category ul {
             list-style: none;
         }
-        
+
         .skill-category li {
-            padding: 5px 0;
+            padding: 4px 0;
+            font-size: 0.95em;
+        }
+
+        /* ---------------- Contact ---------------- */
+        #contact {
+            background: #fafafa;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* ---------------- Footer ---------------- */
+        footer {
+            padding: 35px 0;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
             color: #555;
         }
-        
-        .skill-category li:before {
-            content: "▸ ";
-            color: #3498db;
-            font-weight: bold;
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: #f8f9fa;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            font-size: 1.1em;
-        }
-        
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-info a:hover {
-            color: #2c3e50;
-        }
-        
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        footer p {
-            opacity: 0.8;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
+
+        /* ---------------- Responsive ---------------- */
+        @media (max-width: 720px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
-            
-            header p {
-                font-size: 1em;
-            }
-            
+
             nav ul {
-                gap: 15px;
-            }
-            
-            section {
-                padding: 40px 0;
-            }
-            
-            section h2 {
-                font-size: 1.6em;
+                gap: 16px;
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>Meghan Howat</h1>
-            <p>Data Science for Public Policy | London School of Economics</p>
+
+<header>
+    <div class="container">
+        <h1>Meghan Howat</h1>
+        <p>Data Science for Public Policy · London School of Economics</p>
+        <a class="cv-link" href="MH_CVAuthumn2025.pdf" target="_blank">
+            Download CV (PDF)
+        </a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <div class="container">
+        <h2>About</h2>
+
+        <div class="about-grid">
+            <img src="finalheadshot.png" alt="Headshot of Meghan Howat" class="headshot">
+
+            <div>
+                <p>
+                    I am a Master of Public Administration student at the London School of Economics,
+                    specialising in Data Science for Public Policy with a focus on environmental
+                    economics and food systems.
+                </p>
+
+                <p>
+                    My research interests centre on agrifood systems transformation for planetary
+                    health, and on how data, econometrics, and machine learning can support evidence-
+                    based net-zero policy design.
+                </p>
+
+                <p>
+                    My work combines data visualisation, causal inference, and applied machine learning
+                    to address complex policy and systems-level challenges.
+                </p>
+            </div>
         </div>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Selected Projects & Visualisations</h2>
+
+        <div class="visualization">
+            <h3>Feelings of safety tracked over time</h3>
+            <img src="FeelingSafeIndiaThailand.png" alt="Safety perceptions in India and Thailand">
+            <p>Trends in perceived safety in India and Thailand over time.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>UK food systems descriptive statistics</h3>
+            <img src="UK_food_importprod_2023.png" alt="UK food imports and production">
+            <p>UK food imports and domestic production in 2023.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>COVID-19 antibody test performance</h3>
+            <img src="COVIDantibodytest.png" alt="Antibody test PPV">
+            <p>Positive predictive value of COVID-19 antibody testing.</p>
+        </div>
+    </div>
+</section>
+
+<section id="publications">
+    <div class="container">
+        <h2>Publications & Working Papers</h2>
+
+        <ul class="pub-list">
+            <li>
+                <span class="pub-title">Title of Working Paper</span><br>
+                <span class="pub-meta">Working paper, 2025.</span>
+            </li>
+            <li>
+                <span class="pub-title">Title of Policy Brief or Report</span><br>
+                <span class="pub-meta">Institution or course context, year.</span>
+            </li>
         </ul>
-    </nav>
-    
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I'm a Master of Public Administration student at the London School of Economics, 
-                specializing in Data Science for Public Policy with a focus on environmental 
-                economics and food systems.
-            </p>
-            <p>
-                I am most interested in agrifood systems transformations to support planetary health, and how data and machine learning 
-                can play a pivotal role in influencing governments and individuals to pursue net-zero policies.
-                My work combines data visualization, econometric analysis, and machine learning techniques to address these 
-                complicated tasks of systems transformation.
-            </p>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <div class="container">
-            
-            <span class="course-tag">Selected Visualizations</span>
-            
-            <div class="visualization">
-                <h3>Feelings of safety tracked over time</h3>
-                <img src="FeelingSafeIndiaThailand.png" alt="Safety in India and Thailand decreasing">
-                <p>Figure: Safety perceptions in India and Thailand showing declining trends over time</p>
+
+        <p style="margin-top: 20px; font-size: 0.95em; color: #555;">
+            (Full list available upon request.)
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2>Skills & Knowledge</h2>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Stata</li>
+                </ul>
             </div>
-            
-            <div class="visualization">
-                <h3>UK food systems descriptive statistics</h3>
-                <img src="UK_food_importprod_2023.png" alt="Imports and production in 2023">
-                <p>Figure: UK food imports and production levels in 2023</p>
+
+            <div class="skill-category">
+                <h3>Data Analysis</h3>
+                <ul>
+                    <li>pandas & NumPy</li>
+                    <li>Econometrics</li>
+                    <li>Causal Inference</li>
+                </ul>
             </div>
-            
-            <div class="visualization">
-                <h3>Tracking the positive predictive value of the COVID-19 antibody tests</h3>
-                <img src="COVIDantibodytest.png" alt="Antibody test PPV">
-                <p>Figure: Positive predictive value analysis of COVID-19 antibody testing</p>
+
+            <div class="skill-category">
+                <h3>Visualisation</h3>
+                <ul>
+                    <li>matplotlib</li>
+                    <li>plotnine</li>
+                    <li>ggplot2</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <div class="container">
-            <h2>Skills & Knowledge</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>R</li>
-                        <li>SQL</li>
-                        <li>Stata</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Data Analysis</h3>
-                    <ul>
-                        <li>pandas</li>
-                        <li>NumPy</li>
-                        <li>Econometrics</li>
-                        <li>Statistical Modeling</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Visualization</h3>
-                    <ul>
-                        <li>matplotlib</li>
-                        <li>plotnine</li>
-                        <li>ggplot2</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Domain Knowledge</h3>
-                    <ul>
-                        <li>Policy Analysis</li>
-                        <li>Environmental Economics</li>
-                        <li>Agrifood Systems</li>
-                        <li>Machine Learning</li>
-                    </ul>
-                </div>
+
+            <div class="skill-category">
+                <h3>Domain Knowledge</h3>
+                <ul>
+                    <li>Policy Analysis</li>
+                    <li>Environmental Economics</li>
+                    <li>Agrifood Systems</li>
+                    <li>Machine Learning</li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:m.l.howat@lse.ac.uk">m.l.howat@lse.ac.uk</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank">linkedin.com/in/meghan-howat</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/mhowat1" target="_blank">github.com/mhowat1</a></p>
-            </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:m.l.howat@lse.ac.uk">m.l.howat@lse.ac.uk</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/meghan-howat-462604154/" target="_blank">linkedin.com/in/meghan-howat</a></p>
+            <p>GitHub: <a href="https://github.com/mhowat1" target="_blank">github.com/mhowat1</a></p>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Meghan Howat. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Meghan Howat</p>
+    </div>
+</footer>
+
 </body>
 </html>
