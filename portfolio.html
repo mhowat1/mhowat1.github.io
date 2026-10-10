@@ -83,14 +83,34 @@
 
 <section>
         <div class="chart-description">
-            <h2>Gun Deaths and Income in U.S. States </h2>
+            <h2>Coffee, Tea, and Cocoa CPI Weight </h2>
             <p> 
-               This chart shows the relationship between gun deaths and income in U.S. states. The data is grouped by region of the U.S.
+               This chart shows the relative weights of coffee, tea, and cocoa in the Consumer Price Index (CPI) over time. The data is sourced from the U.S. Bureau of Labor Statistics and reflects changes in consumer spending patterns for these beverages.
+            </p>
         </div>
-        <figure id="Location1"></figure> 
+        <figure id="Location3"></figure> 
     </section>
 
     <script>
 
-        let figure_1_spec = "wk1_chart1.json";
-        vegaEmbed('#Location1', figure_1_spec) 
+        let figure_1a_spec = "coffee.json";
+        vegaEmbed('#Location3', figure_1a_spec) 
+
+    </script>
+
+<section>
+        <div class="chart-description">
+            <h2>Nuclear  Power in Great Britain </h2>
+            <p> 
+               This chart shows the output of nuclear power in Great Britain over time. The data is sourced from the IEA via ECO-API.
+            </p>
+        </div>
+        <figure id="Location4"></figure> 
+    </section>
+
+    <script>
+
+        let figure_1b_spec = "nuclear.json";
+        vegaEmbed('#Location4', figure_1b_spec) 
+
+    </script>
