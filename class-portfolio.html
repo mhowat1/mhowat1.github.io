@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PP434 Class Portfolio · Meghan Howat</title>
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Vega libraries: these must come before your own scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Meghan Howat</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">PP434 Projects</a></li>
+        <li><a href="class-portfolio.html" aria-current="page">PP434 Portfolio</a></li>
+        <li><a href="research.html">Publications &amp; Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>PP434 Class Portfolio</h1>
+  <p class="lede">A portfolio of charts from the Automated Data Visualisation class.</p>
+
+  <h2>Section 1: A basic chart</h2>
+
+  <section class="chart-section">
+    <p>We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context. As a first example, we're using a basic chart from our repo.</p>
+    <figure id="Location1"></figure>
+    <figure id="Location2"></figure>
+  </section>
+
+  <!-- To add a section: copy the <h2> and <section> above, give the new <figure> a new id,
+       and add a matching vegaEmbed line in the script at the bottom of the page. -->
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul>
+      <li><a href="https://github.com/mhowat1">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+      <li><a href="mailto:m.l.howat@lse.ac.uk">Email</a></li>
+    </ul>
+    <span class="muted">© 2026 Meghan Howat</span>
+  </div>
+</footer>
+
+<script>
+  // Be sure to always use the raw link for specs hosted on GitHub.
+  vegaEmbed('#Location1', "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json");
+  vegaEmbed('#Location2', "wk1_chart2.json");
+</script>
+
+</body>
+</html>

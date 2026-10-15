@@ -1,108 +1,84 @@
 <!DOCTYPE html>
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
-
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping to example3.css or another, and take a look at each example.css to see if you understand it-->
-    <link rel="stylesheet" type="text/css" href="index3.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite packages which we're using to make graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
-
-    <style>
-        /* CSS styles can be defined here, or in a separate CSS file */
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meghan Howat · Data Visualisation</title>
+  <meta name="description" content="Portfolio of data visualisation and data analysis projects.">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+<body>
 
-<body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Your name
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Your Name | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
-    </h3>
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">Meghan Howat</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="portfolio.html">PP434 Projects</a></li>
+        <li><a href="class-portfolio.html">PP434 Portfolio</a></li>
+        <li><a href="research.html">Publications &amp; Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
+<main class="wrap">
 
-        <!-- This element will contain our vega-lite chart -->
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+  <!-- Intro -->
+  <section class="intro">
+    <div>
+      <h1>Turning data into clear visual arguments</h1>
+      <p class="lede">Postgraduate student in [your programme], [your university].</p>
+      <p>I design and build data visualisations and analyses. This site collects selected work, with an emphasis on automated, reproducible pipelines. <!-- Replace with 2–3 sentences about your focus: tools (R, Python, D3, Quarto), topics, interests. --></p>
+      <p class="links">
+        <a href="about.html">About</a>
+        <a href="research.html">Publications &amp; current projects</a>
+        <a href="mailto:m.l.howat@lse.ac.uk">Email</a>
+      </p>
+    </div>
+    <img class="portrait" src="images/portrait.jpg" alt="Portrait of Meghan" onerror="this.style.display='none'">
+  </section>
 
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+  <!-- Selected work: the main body of the landing page -->
+  <h2>Selected work</h2>
+  <div class="cards">
 
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <a class="card" href="portfolio.html">
+      <div class="thumb">Image</div>
+      <div class="body">
+        <div class="tag">Coursework · PP434</div>
+        <h3>PP434 Class Projects</h3>
+        <p>Class challenges from Automated Data Visualisation: hosting live charts (CC01) and building custom visualisations (CC02).</p>
+        <span class="go">View projects →</span>
+      </div>
+    </a>
 
+    <a class="card" href="class-portfolio.html">
+      <div class="thumb">Image</div>
+      <div class="body">
+        <div class="tag">Coursework · PP434</div>
+        <h3>PP434 Class Portfolio</h3>
+        <p>Weekly exercises from the Automated Data Visualisation class: Vega-Lite charts, code and short write-ups.</p>
+        <span class="go">View portfolio →</span>
+      </div>
+    </a>
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
-    <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
-// be sure to always include raw link
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+  </div>
 
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-        
-        let figure_2_spec = "wk1_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+</main>
 
-        vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_2
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_2_spec, adding VegaEmbed for Location2, and adding a new section in the HTML
-        // e.g. 
-        // let figure_2_spec = ...
-        // vegaEmbed('#Location2', figure_2_spec)
-
-
-    </script>
-
-    </section>
-
+<footer class="site-footer">
+  <div class="wrap">
+    <ul>
+      <li><a href="https://github.com/mhowat1">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+      <li><a href="mailto:m.l.howat@lse.ac.uk">Email</a></li>
+    </ul>
+    <span class="muted">© 2026 Meghan Howat</span>
+  </div>
+</footer>
 
 </body>
-    
 </html>

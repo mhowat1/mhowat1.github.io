@@ -1,0 +1,132 @@
+/* ---------- Minimal black & white academic-style theme ----------
+   Edit the variables below to tweak the whole site. */
+:root {
+  --ink: #111;
+  --paper: #fff;
+  --muted: #666;
+  --rule: #111;
+  --soft: #f3f3f3;
+  --measure: 760px;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
+
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Header / nav ---------- */
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap {
+  display: flex; justify-content: space-between; align-items: baseline;
+  flex-wrap: wrap; gap: 8px 24px; padding-top: 22px; padding-bottom: 14px;
+}
+.site-name { font-family: var(--serif); font-size: 1.25rem; font-weight: bold; text-decoration: none; }
+.site-name:hover { background: none; color: var(--ink); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+nav a { text-decoration: none; font-size: 0.95rem; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+nav a:hover { background: none; color: var(--ink); border-bottom-color: var(--ink); }
+nav a[aria-current="page"] { border-bottom-color: var(--ink); font-weight: 600; }
+
+/* ---------- Typography ---------- */
+main.wrap { padding-top: 48px; padding-bottom: 72px; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.25; margin: 0; }
+h1 { font-size: 2.1rem; margin-bottom: 10px; }
+h2 { font-size: 1.35rem; margin: 52px 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.1rem; }
+p { margin: 0 0 1em; }
+.lede { font-size: 1.15rem; color: var(--muted); margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.links { margin-top: 18px; font-size: 0.95rem; }
+.links a + a { margin-left: 16px; }
+
+/* ---------- Landing: intro ---------- */
+.intro { display: grid; grid-template-columns: 1fr 150px; gap: 32px; align-items: start; }
+.portrait {
+  width: 150px; height: 150px; object-fit: cover; border: 1px solid var(--rule);
+  background: var(--soft); display: block;
+}
+
+/* ---------- Project cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.card {
+  display: block; border: 1px solid var(--rule); text-decoration: none; color: var(--ink);
+  background: var(--paper);
+}
+.card:hover { background: var(--ink); color: var(--paper); }
+.card:hover .thumb { border-bottom-color: var(--paper); }
+.thumb {
+  aspect-ratio: 16 / 10; width: 100%; object-fit: cover; display: flex; align-items: center; justify-content: center;
+  background: var(--soft); border-bottom: 1px solid var(--rule); color: var(--muted);
+  font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+}
+img.thumb { display: block; }
+.card .body { padding: 16px 18px 20px; }
+.card .tag { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-bottom: 6px; }
+.card h3 { margin-bottom: 6px; }
+.card p { margin: 0; font-size: 0.95rem; opacity: 0.85; }
+.card .go { display: inline-block; margin-top: 12px; font-size: 0.9rem; font-weight: 600; }
+.card.soon { border-style: dashed; }
+.card.soon:hover { background: var(--paper); color: var(--ink); cursor: default; }
+
+/* Full-width variant for the portfolio page */
+.cards.single { grid-template-columns: 1fr; }
+.cards.single .card { display: grid; grid-template-columns: 260px 1fr; }
+.cards.single .thumb { aspect-ratio: auto; min-height: 100%; border-bottom: 0; border-right: 1px solid var(--rule); }
+.cards.single .card:hover .thumb { border-right-color: var(--paper); }
+
+/* ---------- Lists (publications, projects, CV-style) ---------- */
+.entries { list-style: none; margin: 0; padding: 0; }
+.entries li { padding: 0 0 22px; }
+.entries .title { font-weight: 600; }
+.entries .venue { font-style: italic; }
+.status {
+  display: inline-block; border: 1px solid var(--rule); font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; padding: 0 6px; margin-left: 8px; vertical-align: 2px;
+}
+
+table.simple { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+table.simple td { padding: 8px 0; border-bottom: 1px solid #ddd; vertical-align: top; }
+table.simple td:first-child { width: 150px; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--rule); font-size: 0.9rem; }
+.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 18px; padding-bottom: 28px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; }
+.site-footer .muted { color: var(--muted); }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  main.wrap { padding-top: 32px; }
+  h1 { font-size: 1.7rem; }
+  .intro { grid-template-columns: 1fr; }
+  .portrait { order: -1; width: 110px; height: 110px; }
+  .cards { grid-template-columns: 1fr; }
+  .cards.single .card { grid-template-columns: 1fr; }
+  .cards.single .thumb { aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--rule); }
+  table.simple td:first-child { width: 100px; }
+}
+
+@media print {
+  .site-header nav, .site-footer { display: none; }
+  a { text-decoration: none; }
+}
+
+/* ---------- Chart sections (PP434 pages) ---------- */
+.chart-section { margin-bottom: 40px; }
+.chart-section h3 { margin-bottom: 8px; }
+.chart-section figure { margin: 16px 0 0; max-width: 100%; overflow-x: auto; }
+.page-intro { margin-bottom: 8px; }
